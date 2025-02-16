@@ -18,9 +18,12 @@ public class Graph : MonoBehaviour
             // Creates an instance of the point prefab
             Transform point = Instantiate(pointPrefab); // Returns a transform since prefab is one
             position.x = (float) (i*cube_length)/(resolution) + scale/2 - 1f; // Pos value into -1to1 range then shift by half size to right
-            position.y = position.x * position.x; // y = x^2
+            position.y = position.x * position.x * position.x; // y = x^3
             point.localPosition = position; 
             point.localScale = Vector3.one * scale;
+            // Assign the new object as child of the graph (transform of the scene)
+            point.SetParent(transform, false); // false => doesn't inherit parent's values
+            
         }
     }
 

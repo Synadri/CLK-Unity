@@ -1,6 +1,13 @@
 ## Default Built-in Pipeline (BRP)
 *Honestly just use URP or HDRP, but anyways*
-- #### The basics of GPU hardware
+It uses Unity's own syntax for shader assets, which is a mix of many languages, you gotta create a main shader, subshaders with it's own mix of CG and HLSL (shader languages)....
+
+## Universal Render Pipeline (URP)
+Likely to become Unity's main render pipeline.
+
+
+## High-Definition Render Pipeline (HDRP)
+## The basics of GPU hardware
 GPU's execute shader functions by partitioning its work into groups, scheduling them to
 run independently and in parallel.
 **GPU Threads**
